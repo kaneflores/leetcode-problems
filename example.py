@@ -7,3 +7,13 @@ class Solution:
                     return [x,y]
         return []
 #######BRUTE FORCE################################################################1
+
+# Valid parentheses solution: #############################################################################
+class Solution:
+    def isValid(self, s: str) -> bool:
+        while "()" in s or '{}' in s or '[]' in s:
+            s = s.replace('()', '')
+            s = s.replace('{}','')
+            s = s.replace('[]','')
+        return s == ''
+#######BRUTE FORCE################################################################1
