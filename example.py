@@ -71,3 +71,19 @@ class Solution:
             tail.next = list2
         return dummy.next
 #######O(n) solution################################################################1
+
+##Best time to buy stock and sell stock#################################################################
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        #prices array in prices[i]
+
+        
+        lowest = prices[0]
+        curr_profit = 0
+        for price in prices:
+            if price < lowest:
+                lowest = price
+            elif (price - lowest) > curr_profit:
+                curr_profit = price - lowest
+        return curr_profit
+################################################################################################################################
