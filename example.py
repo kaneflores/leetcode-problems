@@ -97,7 +97,7 @@ class Solution:
             if c.isalnum():
                 newstr = newstr + c.lower()
         return newstr == newstr[::-1]
-    
+################################################################################################################################
     def isPalindrome(self, s: str) -> bool:
         l, r = 0, len(s) -1
 
@@ -116,3 +116,27 @@ class Solution:
          ord('0')<= ord(c) <= ord('9')
          )
 ################################################################################################################################
+#########################invert binary tree##################################################
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        # use recursion
+        if not root:return None
+
+        # swap process
+        dummy = root.left
+        root.left = root.right
+        root.right = dummy
+
+        #recursive step
+        self.invertTree(root.right)
+        self.invertTree(root.left)
+
+        return root
+
+####################################################################################################
