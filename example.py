@@ -145,12 +145,13 @@ class Solution:
         return root"""
 
 ####################################################################################################
+
 ################## valid anagram ######################################################
 ##################solution 1####################################
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         return Counter(s) == Counter(t)
-
+##################solution 2####################################
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
@@ -167,3 +168,21 @@ class Solution:
             if countS[c] != countT.get(c, 0):
                 return False
         return True 
+##################solution 3####################################
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        # hashmaps
+        countS, countT = {}, {}
+
+        # count appearances for each character in both s and t
+        for i in range(len(s)):
+            countS[s[i]] = 1 + countS.get(s[i], 0)
+            countT[t[i]] = 1 + countT.get(t[i], 0)
+        
+        # compare the appearances of each characters in the hashmaps of s, t
+        for char in countS:
+            if countS[char] != countT.get(char, 0):
+                return False
+        return True
+###################################################################################################################################################################################
