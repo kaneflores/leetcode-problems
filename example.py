@@ -139,9 +139,16 @@ class Solution:
 
         return root
 ##second solution
-if not root:
+"""if not root:
             return None
         root.left, root.right = self.invertTree(root.right), self.invertTree(root.left)
-        return root
+        return root"""
 
 ####################################################################################################
+################## valid anagram ######################################################
+##################solution 1####################################
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return Counter(s) == Counter(t)
+
+    
