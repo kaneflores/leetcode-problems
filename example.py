@@ -189,3 +189,19 @@ class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         return sorted(s) == sorted(t)
 ###################################################################################################################################################################################
+######################BINARY SEARCH
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        low = nums[0]
+        high = nums[-1]
+        while low < high:
+            mid = low + (high - low)//2
+
+            if nums[mid] == target:
+                return mid
+
+            elif nums[mid]<target:
+                low = mid +1
+            else:
+                high = mid -1
+        return -1 
