@@ -226,3 +226,24 @@ class Solution:
         self.dfs(image, sr-1,sc, color, startpixel)#up
         self.dfs(image, sr,sc+1, color, startpixel)#right
         self.dfs(image, sr,sc-1, color, startpixel)#left
+##################################3##################################
+###################################ZIGZAG CODESIGNALS3##################################
+#c++ solution
+class Solution:
+vector<int> solution(vector<int> numbers) {
+    vector<int> result;
+    
+    for(int i = 0; i < numbers.size()-2; i++){
+        int a = numbers[i];
+        int b = numbers[i+1];
+        int c = numbers[i+2];
+        
+        if ((a < b && b > c) || (a>b && b<c)) {
+            result.push_back(1);
+        }
+        else {
+        result.push_back(0);
+        }
+    }
+    return result;
+}
