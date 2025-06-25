@@ -206,3 +206,23 @@ class Solution:
             else:# nums[m] == target
                 return m
         return -1 #failure of search
+    ##################################33##########################################################################################################################################################################
+######################################3FLOOD FILL##############################
+class Solution:
+    def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
+        #[1,1]
+        startpixel = image[sr][sc]
+
+        self.dfs(image, sr,sc, color, startpixel)
+
+        return image
+
+    def dfs(self, image, sr,sc, color, startpixel):
+
+        if sr <0 or sr> len(image)-1 or sc < 0 or sc> len(image[0]) -1 or image[sr][sc] == color or image[sr][sc] != startpixel:
+            return
+        image[sr][sc] = color
+        self.dfs(image, sr+1,sc, color, startpixel) #down
+        self.dfs(image, sr-1,sc, color, startpixel)#up
+        self.dfs(image, sr,sc+1, color, startpixel)#right
+        self.dfs(image, sr,sc-1, color, startpixel)#left
