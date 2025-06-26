@@ -7,6 +7,18 @@ class Solution:
                     return [x,y]
         return []
 #######BRUTE FORCE################################################################1
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        numMap = {} #to store numbers and their index
+        
+        for i, num in enumerate(nums):
+            complement = target - num 
+
+            if complement in numMap:
+                return [numMap[complement], i]
+            else:
+                numMap[num] = i
+        return []
 
 # Valid parentheses solution: #############################################################################
 class Solution:
