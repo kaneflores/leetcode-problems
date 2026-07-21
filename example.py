@@ -7,6 +7,7 @@ class Solution:
                 if nums[x]+nums[y] == target:
                     return [x,y]
                     
+                    
         return []
 #######BRUTE FORCE################################################################1
 class Solution:
