@@ -6,6 +6,7 @@ class Solution:
             for y in range(x+1, len(nums)):
                 if nums[x]+nums[y] == target:
                     return [x,y]
+                    
         return []
 #######BRUTE FORCE################################################################1
 class Solution:
