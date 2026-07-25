@@ -33,7 +33,6 @@ class Solution:
 
 
 # Valid parentheses solution: #############################################################################
-
 class Solution:
     def isValid(self, s: str) -> bool:
         # Initialize an empty stack to keep track of opening brackets
