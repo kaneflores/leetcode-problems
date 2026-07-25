@@ -91,7 +91,6 @@ class Solution:
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         #prices array in prices[i]
-
         
         lowest = prices[0]
         curr_profit = 0
