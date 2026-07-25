@@ -31,7 +31,6 @@ class Solution:
         return s == ''
 #######BRUTE FORCE################################################################1
 
-
 # Valid parentheses solution: #############################################################################
 class Solution:
     def isValid(self, s: str) -> bool:
