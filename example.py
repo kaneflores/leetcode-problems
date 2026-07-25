@@ -273,4 +273,3 @@ def solution(numbers):
         else:
             result.append(0)
     return result
-
