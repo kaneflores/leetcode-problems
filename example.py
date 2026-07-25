@@ -10,7 +10,6 @@ class Solution:
 #######BRUTE FORCE################################################################1
 
 class Solution:
-    
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         numMap = {} #to store numbers and their index
         
