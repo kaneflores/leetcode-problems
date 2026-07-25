@@ -22,7 +22,6 @@ class Solution:
                 numMap[num] = i
         return []
 
-
 # Valid parentheses solution: #############################################################################
 class Solution:
     def isValid(self, s: str) -> bool:
